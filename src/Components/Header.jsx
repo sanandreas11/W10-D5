@@ -28,7 +28,7 @@ function Header({ onSearch }) {
       .then((data) => {
         console.log("Current weather:", data.weatherData)
         console.log("Forecast:", data.forecastData)
-        onSearch(data) // Send both datasets to the parent
+        onSearch(data)
       })
       .catch((error) => {
         console.error("Errore:", error)
@@ -38,7 +38,11 @@ function Header({ onSearch }) {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-warning">
       <Container className="d-sm-flex flex-sm-column justify-content-center flex-lg-row justify-content-lg-between">
-        <Navbar.Brand className="d-flex align-items-center" href="#home">
+        <Navbar.Brand
+          className="d-flex align-items-center"
+          href="#home"
+          onClick={() => onSearch({ weatherData: null, forecastData: null })}
+        >
           <img className="w-25" src="../public/logo.png" alt="logo" />
           <h2>Il Meteo</h2>
         </Navbar.Brand>

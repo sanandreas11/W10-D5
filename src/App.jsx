@@ -32,7 +32,7 @@ function App() {
           </>
         ) : (
           <div className="d-flex flex-column justify-content-center align-items-center text-center">
-            <h1 className="my-3">Benvenuti nella mia app di meteo!</h1>
+            <h1 className="my-3">Benvenuti nella nostra app di meteo!</h1>
             <img src="https://placebear.com/500/500" alt="welcome image" />
             <p className="mt-2">
               In the loving memory of Orfisso
